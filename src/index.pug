@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width-device-width, initial-scale=1.0")
+        link(rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png")
+
+        title Frontend Mentor | Calculator app
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet")
+    
+        link(rel="stylesheet" href="../sass/style.scss")
+
+
+    body 
+        main.calc 
+            header.calc__header 
+                h1.calc__primary-heading calc 
+                .calc__tswitch 
+                    p.calc__tswitch--desc THEME 
+                    .calc__tswitch--toggle
+                        .calc__tswitch--labels
+                            label(for="theme") 1
+                            label(for="theme") 2
+                            label(for="theme") 3
+                        .calc__tswitch--inputs 
+                            input.calc__tswitch--input(type="radio" class="calc__tswitch--input-1" id="one" name="theme")
+                            input.calc__tswitch--input(type="radio" class="calc__tswitch--input-2" id="two" name="theme")
+                            input.calc__tswitch--input(type="radio" class="calc__tswitch--input-3" id="three" name="theme") 
+            
+            .calc__input-display 
+                p.calc__input-display--box 399,981
+            
+
+            .calc__keypad
+                .calc__keypad--col 
+                    button.calc__keypad--btn 7
+                    button.calc__keypad--btn 8
+                    button.calc__keypad--btn 9
+                    button.calc__keypad--btn.calc__keypad--rd-btn DEL 
+                .calc__keypad--col 
+                    button.calc__keypad--btn 4
+                    button.calc__keypad--btn 5
+                    button.calc__keypad--btn 6
+                    button.calc__keypad--btn +
+                .calc__keypad--col 
+                    button.calc__keypad--btn 1
+                    button.calc__keypad--btn 2
+                    button.calc__keypad--btn 3
+                    button.calc__keypad--btn -
+                .calc__keypad--col 
+                    button.calc__keypad--btn . 
+                    button.calc__keypad--btn 0
+                    button.calc__keypad--btn /
+                    button.calc__keypad--btn x
+                .calc__keypad--col  
+                    button.calc__keypad--btn.calc__keypad--rd-btn RESET
+                    button.calc__keypad--btn.calc__keypad--tg-eq-btn =  
+        script(src="../script.js")
+
+
+        

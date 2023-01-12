@@ -1,0 +1,17 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev":"parcel src/html/index.html",
+    "build":"parcel build src/html/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.57.1"
+  }
+}

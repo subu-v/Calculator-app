@@ -1,0 +1,78 @@
+@use "abstract" as *;
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --clr-main-bg: hsl(222, 26%, 31%);
+  --clr-toggle-keypad-bg: hsl(223, 31%, 20%);
+  --clr-screen-bg: hsl(224, 36%, 15%);
+
+  --clr-nums-op-bg: hsl(30, 25%, 89%);
+  --clr-nums-op-shadow: hsl(28, 16%, 65%);
+
+  --clr-toggle-equals-bg: hsl(6, 63%, 50%);
+  --clr-toggle-equals-shadow: hsl(6, 70%, 34%);
+  --clr-toggle-equals-hover: hsl(6, 93%, 67%);
+
+  --clr-reset-del-bg: hsl(225, 21%, 49%);
+  --clr-reset-del-shadow: hsl(223, 28%, 35%);
+  --clr-reset-del-hover: hsl(224, 51%, 76%);
+
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-nums-op-text: hsl(221, 14%, 31%);
+}
+
+.theme-2 {
+  --clr-main-bg: hsl(0, 0%, 90%);
+  --clr-toggle-keypad-bg: hsl(0, 5%, 81%);
+  --clr-screen-bg: hsl(0, 0%, 93%);
+
+  --clr-nums-op-bg: hsl(45, 7%, 89%);
+  --clr-nums-op-shadow: hsl(35, 11%, 61%);
+
+  --clr-toggle-equals-bg: hsl(25, 98%, 40%);
+  --clr-toggle-equals-shadow: hsl(25, 99%, 27%);
+
+  --clr-reset-del-bg: hsl(185, 42%, 37%);
+  --clr-reset-del-shadow: hsl(185, 58%, 25%);
+
+  --clr-text: hsl(60, 10%, 19%);
+  --clr-nums-op-text: hsl(60, 10%, 19%);
+}
+
+.theme-3 {
+  --clr-main-bg: hsl(268, 75%, 9%);
+  --clr-toggle-keypad-bg: hsl(268, 71%, 12%);
+  --clr-screen-bg: hsl(268, 71%, 12%);
+
+  --clr-nums-op-bg: hsl(268, 47%, 21%);
+  --clr-nums-op-shadow: hsl(290, 70%, 36%);
+
+  --clr-toggle-equals-bg: hsl(176, 100%, 44%);
+  --clr-toggle-equals-shadow: hsl(177, 92%, 70%);
+
+  --clr-reset-del-bg: hsl(281, 89%, 26%);
+  --clr-reset-del-shadow: hsl(285, 91%, 52%);
+
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-nums-op-text: hsl(52, 100%, 62%);
+  --clr-equals-text: hsl(198, 20%, 13%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include flex(row, center, center, 0);
+  background-color: var(--clr-main-bg);
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+}

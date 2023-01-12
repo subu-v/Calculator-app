@@ -1,0 +1,134 @@
+@use "base" as *;
+@use "abstract" as *;
+.calc {
+  width: 55rem;
+
+  &__header {
+    @include flex(row, space-between, flex-end, 0);
+    margin-bottom: 3.2rem;
+    color: var(--clr-text);
+  }
+
+  &__primary-heading {
+    font-size: 3.2rem;
+  }
+
+  &__tswitch {
+    @include flex(row, center, center, 2.4rem);
+
+    &--desc {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      transform: translateY(10px);
+    }
+
+    &--toggle {
+      @include flex(column, center, center, 0.6rem);
+    }
+
+    &--labels {
+      @include flex(row, center, initial, 1.8rem);
+    }
+
+    &--labels > label {
+      font-size: 1.4rem;
+    }
+
+    &--inputs {
+      @include flex(row, center, initial, 0);
+      background-color: var(--clr-toggle-keypad-bg);
+      border-radius: 5rem;
+      padding: 0.6rem;
+    }
+
+    &--input {
+      height: 2.2rem;
+      width: 2.3rem;
+      appearance: none;
+      background-color: var(--clr-toggle-equals-bg);
+      border-radius: 50%;
+      opacity: 0;
+      transition: background-color 200ms ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--clr-toggle-equals-hover);
+      }
+    }
+
+    &--input-1 {
+      opacity: 1;
+    }
+  }
+
+  &__input-display {
+    &--box {
+      color: var(--clr-text);
+      width: 100%;
+      font-size: 4.8rem;
+      text-align: right;
+      background-color: var(--clr-screen-bg);
+      border-radius: 10px;
+      padding: 3.2rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__keypad {
+    background-color: var(--clr-toggle-keypad-bg);
+    padding: 3.2rem;
+    border-radius: 10px;
+
+    &--col {
+      @include flex(row, center, center, 2.4rem);
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+      }
+    }
+    &--btn {
+      background-color: var(--clr-nums-op-bg);
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 3px var(--clr-nums-op-shadow);
+      color: var(--clr-nums-op-text);
+
+      font-size: 3.2rem;
+      font-weight: 700;
+      font-family: inherit;
+
+      flex: 1;
+
+      padding: 1.6rem 2.4rem 1rem;
+
+      transition: background 200ms ease;
+
+      &:hover {
+        background-color: var(--clr-text);
+      }
+    }
+
+    &--rd-btn,
+    &--tg-eq-btn {
+      transition: background 200ms ease;
+    }
+    &--rd-btn {
+      background-color: var(--clr-reset-del-bg);
+      box-shadow: 0 3px var(--clr-reset-del-shadow);
+      color: var(--clr-text);
+
+      &:hover {
+        background-color: var(--clr-reset-del-hover);
+      }
+    }
+
+    &--tg-eq-btn {
+      background-color: var(--clr-toggle-equals-bg);
+      box-shadow: 0 3px var(--clr-toggle-equals-shadow);
+      color: var(--clr-text);
+
+      &:hover {
+        background-color: var(--clr-toggle-equals-hover);
+      }
+    }
+  }
+}

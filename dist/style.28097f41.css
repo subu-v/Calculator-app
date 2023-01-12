@@ -1,0 +1,201 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --clr-main-bg: hsl(222, 26%, 31%);
+  --clr-toggle-keypad-bg: hsl(223, 31%, 20%);
+  --clr-screen-bg: hsl(224, 36%, 15%);
+  --clr-nums-op-bg: hsl(30, 25%, 89%);
+  --clr-nums-op-shadow: hsl(28, 16%, 65%);
+  --clr-toggle-equals-bg: hsl(6, 63%, 50%);
+  --clr-toggle-equals-shadow: hsl(6, 70%, 34%);
+  --clr-toggle-equals-hover: hsl(6, 93%, 67%);
+  --clr-reset-del-bg: hsl(225, 21%, 49%);
+  --clr-reset-del-shadow: hsl(223, 28%, 35%);
+  --clr-reset-del-hover: hsl(224, 51%, 76%);
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-nums-op-text: hsl(221, 14%, 31%);
+}
+
+.theme-2 {
+  --clr-main-bg: hsl(0, 0%, 90%);
+  --clr-toggle-keypad-bg: hsl(0, 5%, 81%);
+  --clr-screen-bg: hsl(0, 0%, 93%);
+  --clr-nums-op-bg: hsl(45, 7%, 89%);
+  --clr-nums-op-shadow: hsl(35, 11%, 61%);
+  --clr-toggle-equals-bg: hsl(25, 98%, 40%);
+  --clr-toggle-equals-shadow: hsl(25, 99%, 27%);
+  --clr-reset-del-bg: hsl(185, 42%, 37%);
+  --clr-reset-del-shadow: hsl(185, 58%, 25%);
+  --clr-text: hsl(60, 10%, 19%);
+  --clr-nums-op-text: hsl(60, 10%, 19%);
+}
+
+.theme-3 {
+  --clr-main-bg: hsl(268, 75%, 9%);
+  --clr-toggle-keypad-bg: hsl(268, 71%, 12%);
+  --clr-screen-bg: hsl(268, 71%, 12%);
+  --clr-nums-op-bg: hsl(268, 47%, 21%);
+  --clr-nums-op-shadow: hsl(290, 70%, 36%);
+  --clr-toggle-equals-bg: hsl(176, 100%, 44%);
+  --clr-toggle-equals-shadow: hsl(177, 92%, 70%);
+  --clr-reset-del-bg: hsl(281, 89%, 26%);
+  --clr-reset-del-shadow: hsl(285, 91%, 52%);
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-nums-op-text: hsl(52, 100%, 62%);
+  --clr-equals-text: hsl(198, 20%, 13%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: var(--clr-main-bg);
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+}
+
+.calc {
+  width: 55rem;
+}
+.calc__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0;
+  margin-bottom: 3.2rem;
+  color: var(--clr-text);
+}
+.calc__primary-heading {
+  font-size: 3.2rem;
+}
+.calc__tswitch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.calc__tswitch--desc {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transform: translateY(10px);
+}
+.calc__tswitch--toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.calc__tswitch--labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: initial;
+  gap: 1.8rem;
+}
+.calc__tswitch--labels > label {
+  font-size: 1.4rem;
+}
+.calc__tswitch--inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: initial;
+  gap: 0;
+  background-color: var(--clr-toggle-keypad-bg);
+  border-radius: 5rem;
+  padding: 0.6rem;
+}
+.calc__tswitch--input {
+  height: 2.2rem;
+  width: 2.3rem;
+  appearance: none;
+  background-color: var(--clr-toggle-equals-bg);
+  border-radius: 50%;
+  opacity: 0;
+  transition: background-color 200ms ease;
+}
+.calc__tswitch--input:hover {
+  cursor: pointer;
+  background-color: var(--clr-toggle-equals-hover);
+}
+.calc__tswitch--input-1 {
+  opacity: 1;
+}
+.calc__input-display--box {
+  color: var(--clr-text);
+  width: 100%;
+  font-size: 4.8rem;
+  text-align: right;
+  background-color: var(--clr-screen-bg);
+  border-radius: 10px;
+  padding: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.calc__keypad {
+  background-color: var(--clr-toggle-keypad-bg);
+  padding: 3.2rem;
+  border-radius: 10px;
+}
+.calc__keypad--col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.calc__keypad--col:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+.calc__keypad--btn {
+  background-color: var(--clr-nums-op-bg);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px var(--clr-nums-op-shadow);
+  color: var(--clr-nums-op-text);
+  font-size: 3.2rem;
+  font-weight: 700;
+  font-family: inherit;
+  flex: 1;
+  padding: 1.6rem 2.4rem 1rem;
+  transition: background 200ms ease;
+}
+.calc__keypad--btn:hover {
+  background-color: var(--clr-text);
+}
+.calc__keypad--rd-btn, .calc__keypad--tg-eq-btn {
+  transition: background 200ms ease;
+}
+.calc__keypad--rd-btn {
+  background-color: var(--clr-reset-del-bg);
+  box-shadow: 0 3px var(--clr-reset-del-shadow);
+  color: var(--clr-text);
+}
+.calc__keypad--rd-btn:hover {
+  background-color: var(--clr-reset-del-hover);
+}
+.calc__keypad--tg-eq-btn {
+  background-color: var(--clr-toggle-equals-bg);
+  box-shadow: 0 3px var(--clr-toggle-equals-shadow);
+  color: var(--clr-text);
+}
+.calc__keypad--tg-eq-btn:hover {
+  background-color: var(--clr-toggle-equals-hover);
+}
+
+/*# sourceMappingURL=/style.28097f41.css.map */
