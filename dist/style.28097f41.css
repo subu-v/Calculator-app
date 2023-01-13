@@ -12,6 +12,7 @@
   --clr-screen-bg: hsl(224, 36%, 15%);
   --clr-nums-op-bg: hsl(30, 25%, 89%);
   --clr-nums-op-shadow: hsl(28, 16%, 65%);
+  --clr-nums-op-hover: hsl(0, 0%, 100%);
   --clr-toggle-equals-bg: hsl(6, 63%, 50%);
   --clr-toggle-equals-shadow: hsl(6, 70%, 34%);
   --clr-toggle-equals-hover: hsl(6, 93%, 67%);
@@ -28,10 +29,14 @@
   --clr-screen-bg: hsl(0, 0%, 93%);
   --clr-nums-op-bg: hsl(45, 7%, 89%);
   --clr-nums-op-shadow: hsl(35, 11%, 61%);
+  --clr-nums-op-hover: hsl(0, 0%, 100%);
   --clr-toggle-equals-bg: hsl(25, 98%, 40%);
   --clr-toggle-equals-shadow: hsl(25, 99%, 27%);
+  --clr-toggle-equals-hover: hsl(25, 100%, 61%);
   --clr-reset-del-bg: hsl(185, 42%, 37%);
   --clr-reset-del-shadow: hsl(185, 58%, 25%);
+  --clr-reset-del-hover: hsl(186, 41%, 56%);
+  --clr-white: hsl(0, 0%, 100%);
   --clr-text: hsl(60, 10%, 19%);
   --clr-nums-op-text: hsl(60, 10%, 19%);
 }
@@ -42,17 +47,27 @@
   --clr-screen-bg: hsl(268, 71%, 12%);
   --clr-nums-op-bg: hsl(268, 47%, 21%);
   --clr-nums-op-shadow: hsl(290, 70%, 36%);
+  --clr-nums-op-hover: hsl(268, 54%, 44%);
   --clr-toggle-equals-bg: hsl(176, 100%, 44%);
   --clr-toggle-equals-shadow: hsl(177, 92%, 70%);
+  --clr-toggle-equals-hover: hsl(177, 100%, 79%);
   --clr-reset-del-bg: hsl(281, 89%, 26%);
   --clr-reset-del-shadow: hsl(285, 91%, 52%);
-  --clr-text: hsl(0, 0%, 100%);
+  --clr-reset-del-hover: hsl(280, 57%, 44%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-text: hsl(52, 100%, 62%);
   --clr-nums-op-text: hsl(52, 100%, 62%);
   --clr-equals-text: hsl(198, 20%, 13%);
 }
 
 html {
   font-size: 62.5%;
+}
+html:has(.theme-2) .calc__keypad--rd-btn, html:has(.theme-2) .calc__keypad--tg-eq-btn, html:has(.theme-3) .calc__keypad--rd-btn {
+  color: var(--clr-white);
+}
+html:has(.theme-3) .calc__keypad--tg-eq-btn {
+  color: var(--clr-equals-text);
 }
 
 body {
@@ -176,7 +191,7 @@ body {
   transition: background 200ms ease;
 }
 .calc__keypad--btn:hover {
-  background-color: var(--clr-text);
+  background-color: var(--clr-nums-op-hover);
 }
 .calc__keypad--rd-btn, .calc__keypad--tg-eq-btn {
   transition: background 200ms ease;

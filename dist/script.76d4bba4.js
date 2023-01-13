@@ -128,6 +128,8 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 var toggleSwitch = document.getElementsByClassName("calc__tswitch--input");
 var inputBtns = _toConsumableArray(toggleSwitch);
+var keypad = document.querySelector(".calc__keypad");
+//Theme switcher
 inputBtns.forEach(function (ele) {
   ele.addEventListener("click", function (e) {
     console.log("btn clicked");
@@ -139,7 +141,7 @@ inputBtns.forEach(function (ele) {
     });
     if (ele.id === "one") {
       document.body.classList.remove("theme-2");
-      document.body.classList.remove("theme-2");
+      document.body.classList.remove("theme-3");
     } else if (ele.id === "two") {
       document.body.classList.add("theme-2");
       document.body.classList.remove("theme-3");
@@ -174,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60745" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61674" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
